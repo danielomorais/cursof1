@@ -7,15 +7,16 @@
     </div>
     <div class="card-body">
 
-        @if (count($produtos) > 5)
+        @if (count($categorias) > 5)
         <div class="alert alert-danger">Cuidado!!!</div>
         @endif
 
         <ul class="list-group">
-        @foreach ($produtos as $produto)
-            <li class="list-group-item">{{ $produto }}</li>
+        @foreach ($categorias as $categoria)
+            <li class="list-group-item">{{ $categoria }}</li>
         @endforeach
         </ul>
     </div>
 </div>
 @endsection
+

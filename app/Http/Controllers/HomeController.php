@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function index(Request $request)
+    public function produtos(Request $request)
     {
         $tituloDaPagina = 'Listagem de produtos TOP!!';
 
@@ -19,5 +19,19 @@ class HomeController extends Controller
         ];
 
         return view('produtos', compact('tituloDaPagina', 'produtos'));
+    }
+
+    public function categorias(Request $request)
+    {
+        $tituloDaPagina = 'Listagem de Categorias!!!';
+
+        $categorias = [
+            'Vestuário',
+            'Eletrônicos',
+            'Brinquedos',
+            'Alimentação'
+        ];
+
+        return view('categorias', compact('tituloDaPagina', 'categorias'));
     }
 }
