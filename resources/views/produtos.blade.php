@@ -13,7 +13,7 @@
 
         <ul class="list-group">
         @foreach ($produtos as $produto)
-            <li class="list-group-item">{{ $produto }}</li>
+            <li class="list-group-item">{{ $produto->nome }}</li>
         @endforeach
         </ul>
     </div>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Produto;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -10,13 +11,9 @@ class HomeController extends Controller
     {
         $tituloDaPagina = 'Listagem de produtos TOP!!';
 
-        $produtos = [
-            'Samsung Galaxy S25',
-            'Iphone 16',
-            'Bola de Couro',
-            'Gloos Morango Europeu',
-            'Corsa Wind 98'
-        ];
+        $produtos = Produto::all();
+
+        #dd($produtos);
 
         return view('produtos', compact('tituloDaPagina', 'produtos'));
     }
