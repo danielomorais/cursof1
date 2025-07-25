@@ -13,22 +13,11 @@ class HomeController extends Controller
 
         $produtos = Produto::all();
 
-        #dd($produtos);
-
         return view('produtos', compact('tituloDaPagina', 'produtos'));
     }
 
     public function categorias(Request $request)
     {
-        $tituloDaPagina = 'Listagem de Categorias!!!';
-
-        $categorias = [
-            'Vestuário',
-            'Eletrônicos',
-            'Brinquedos',
-            'Alimentação'
-        ];
-
-        return view('categorias', compact('tituloDaPagina', 'categorias'));
+        
     }
 }
