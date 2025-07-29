@@ -18,6 +18,6 @@ class HomeController extends Controller
 
     public function categorias(Request $request)
     {
-        
+
     }
 }
